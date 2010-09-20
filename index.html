@@ -52,21 +52,43 @@
     using Copilot.  Here's a Copilot program that computes the Fibonacci
     sequence (over Word 64s) and tests for even numbers:</p>
 <pre><code>
-t :: Streams
-t = do
+fib :: Streams
+fib = do
   "fib" .= [0,1] ++ var "fib" + (drop 1 $ varW64 "fib")
   "t" .= even (var "fib")
     where even :: Spec Word64 -> Spec Bool
           even w = w `mod` const 2 == const 0    
-</code>
-</pre>
+</code> </pre>
+</p>
+
 <p>Copilot contains an interpreter, a compiler, and uses a model-checker to check
     the correctness of your program.  The compiler generates constant time and
     constant space C code via <a href="http://github.com/tomahawkins/atom" >Tom
-    Hawkin's Atom</a> (thanks Tom!).  Copilot was originally developed to write
-    embedded monitors for more complex embedded systems, but it can be used to
+    Hawkin's Atom</a> (thanks Tom!).  Copilot is specifically developed to write
+    embedded software monitors for more complex embedded systems, but it can be used to
     develop a variety of functional-style embedded code.
 </p>
+
+
+<p>
+Executing
+<pre>
+> compile fib "fib" baseOpts
+</pre>
+generates <a href="./fib.c" >fib.c</a> and <a href="fib.h" >fib.h</a> (with a <tt>main()</tt> for simulation---other options
+    change that).  We can then run
+<pre>
+> interpret fib 100 baseOpts
+</pre>
+to check that the Copilot program does what we expect.  Finally, if we have <a href="http://www.cprover.org/cbmc/" >CBMC</a>
+    installed, we can run
+
+<pre>
+> verify "fib.c"
+</pre>
+    to prove a bunch of memory safety properties of the generated program.</p>
+
+    
 
 <h2>Diving In</h2>
     <p> Copilot is a language embedded in Haskell.  So you'll need <a
