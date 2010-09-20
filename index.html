@@ -38,27 +38,101 @@
 
   <div id="container">
 
-    <div class="download">
+
+    <h1><a href="http://github.com/leepike/Copilot">Copilot</a>   <div class="download">
+<img border="2" width="150" src="install.JPG" ></div>
+
+      </h1>
+
+   
+    <div class="description">    </div>
+     <p>A (Haskell DSL) stream language for generating hard real-time C code.</p>
+
+     <p>Can you write a list in Haskell?  Then you can write embedded C code
+    using Copilot.  Here's a Copilot program that computes the Fibonacci
+    sequence (over Word 64s) and tests for even numbers:</p>
+<pre><code>
+t :: Streams
+t = do
+  "fib" .= [0,1] ++ var "fib" + (drop 1 $ varW64 "fib")
+  "t" .= even (var "fib")
+    where even :: Spec Word64 -> Spec Bool
+          even w = w `mod` const 2 == const 0    
+</code>
+</pre>
+<p>Copilot contains an interpreter, a compiler, and uses a model-checker to check
+    the correctness of your program.  The compiler generates constant time and
+    constant space C code via <a href="http://github.com/tomahawkins/atom" >Tom
+    Hawkin's Atom</a> (thanks Tom!).  Copilot was originally developed to write
+    embedded monitors for more complex embedded systems, but it can be used to
+    develop a variety of functional-style embedded code.
+</p>
+
+<h2>Diving In</h2>
+    <p> Copilot is a language embedded in Haskell.  So you'll need <a
+    href="http://hackage.haskell.org/platform/" >Haskell</a> to use it.  Copilot
+    is best installed using <a
+    href="http://www.haskell.org/haskellwiki/Cabal-Install">Cabal</a>, which can
+    be done by executing
+    <pre>
+> cabal install copilot
+</pre>
+    Source code <strong>documentation</strong> is available on <a href="http://hackage.haskell.org/package/copilot">Hackage</a>.
+    </p>
+
+ <p>To get help with the interface, in a context in which <a
+ href="http://github.com/leepike/Copilot/blob/master/Language/Copilot/Interface.hs"
+ >Language/Copilot/Interface.hs</a> is visible, evaluate
+<pre>> help</pre>
+    to get the contents of <a
+ href="http://github.com/leepike/Copilot/blob/master/Language/Copilot/Help.hs"
+ >Language/Copilot/Help.hs</a>.  That'll give you the basic API of the library.
+    </p>
+    
+<p>Get the source code on GitHub: <a href="http://github.com/leepike/Copilot">leepike/Copilot</a>.
+</p>      
+
+      <h2>Other Resources</h2>
+     <p>
+      <ul>
+        <li><strong>Paper</strong> about Copilot: <a href="http://www.cs.indiana.edu/~lepike/pub_pages/rv2010.html" >http://www.cs.indiana.edu/~lepike/pub_pages/rv2010.html</a></li>
+        <li><strong>Pics/videos</strong> from Copilot's maiden voyage monitoring a fault-tolerant
+    pitot tube sensor: <a href="http://picasaweb.google.com/105722675808588603973" >http://picasaweb.google.com/105722675808588603973</a></li>
+        <li>Copilot on Hackage: <a
+      href="http://hackage.haskell.org/package/copilot">http://hackage.haskell.org/package/copilot</a></li>
+      <li><strong>Blogging</strong> about Copilot: <a href="http://leepike.wordpress.com/"
+      >http://leepike.wordpress.com/</a> (forthcoming)</li>
+        <li>Other things I do: <a href="http://www.cs.indiana.edu/~lepike/" >http://www.cs.indiana.edu/~lepike/</a></li>
+</ul>
+  </p>
+
+<h2>Acknowledgements</h2>
+ <p>We are grateful to NASA's Aviation Safety
+ Program for Contract NNL08AD13T, which partially
+ supported this work. </p>      
+
+
+    <h2>License</h2>
+<p>BSD3</p>
+<h2>Maintainer</h2>
+<p>Lee Pike (leepike@gmail.com)  <br>Email with any questions, bugs, or cool uses!    </p>
+
+<h2>Contributors</h2>
+<p>
+<ul>
+<li>Alwyn Goodloe</li>
+<li>Robin Morisset</li>
+<li>Sebastian Niller</li>
+</ul>
+</p>
+
+
+        <div class="download">
       <a href="http://github.com/leepike/Copilot/zipball/master">
         <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
       <a href="http://github.com/leepike/Copilot/tarball/master">
         <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
-
-    <h1><a href="http://github.com/leepike/Copilot">Copilot</a>
-      <span class="small">by <a href="http://github.com/leepike">leepike</a></span></h1>
-
-    <div class="description">
-      A (Haskell DSL) stream language for generating hard real-time C code.
-    </div>
-
-    <h2>License</h2>
-<p>BSD3</p>
-<h2>Authors</h2>
-<p>leepike (leepike@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p> (leepike@gmail.com)<br/>      </p>
-
 
     <h2>Download</h2>
     <p>
@@ -71,9 +145,11 @@
       <pre>$ git clone git://github.com/leepike/Copilot</pre>
     </p>
 
+
     <div class="footer">
       get the source code on GitHub : <a href="http://github.com/leepike/Copilot">leepike/Copilot</a>
     </div>
+
 
   </div>
 
