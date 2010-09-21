@@ -21,7 +21,11 @@
 ><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
 ></TD
 ><TD CLASS="title"
->copilot-0.21: A lazy-list language for generating constant-time and constant-space C programs.  Uses Atom as a backend.</TD
+>copilot-0.22: A stream DSL for writing embedded C.</TD
+><TD CLASS="topbut"
+><A HREF="http://github.com/leepike/Copilot/Language.Copilot.Libs.LTL.html"
+>Source code</A
+></TD
 ><TD CLASS="topbut"
 ><A HREF="index.html"
 >Contents</A
@@ -78,15 +82,15 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3Aalways"
 >always</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -100,11 +104,11 @@
 >next</A
 > :: <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -116,15 +120,15 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3Aeventually"
 >eventually</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -136,19 +140,19 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3Auntil"
 >until</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -160,19 +164,19 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3Arelease"
 >release</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -199,15 +203,15 @@
 ></A
 ><B
 >always</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -250,11 +254,11 @@
 >next</B
 > :: <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -277,15 +281,15 @@
 ></A
 ><B
 >eventually</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -326,19 +330,19 @@
 ></A
 ><B
 >until</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -368,19 +372,19 @@
 ></A
 ><B
 >release</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -406,7 +410,7 @@
 ><TD CLASS="botbar"
 >Produced by <A HREF="http://www.haskell.org/haddock/"
 >Haddock</A
-> version 2.4.2</TD
+> version 2.6.1</TD
 ></TR
 ></TABLE
 ></BODY

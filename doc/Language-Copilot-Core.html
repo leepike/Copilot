@@ -21,7 +21,11 @@
 ><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
 ></TD
 ><TD CLASS="title"
->copilot-0.21: A lazy-list language for generating constant-time and constant-space C programs.  Uses Atom as a backend.</TD
+>copilot-0.22: A stream DSL for writing embedded C.</TD
+><TD CLASS="topbut"
+><A HREF="http://github.com/leepike/Copilot/Language.Copilot.Core.html"
+>Source code</A
+></TD
 ><TD CLASS="topbut"
 ><A HREF="index.html"
 >Contents</A
@@ -148,7 +152,7 @@
 >type</SPAN
 > <A HREF="#t%3AVar"
 >Var</A
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -162,7 +166,7 @@
 >type</SPAN
 > <A HREF="#t%3AName"
 >Name</A
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -176,7 +180,7 @@
 >type</SPAN
 > <A HREF="#t%3APeriod"
 >Period</A
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 ></TD
 ></TR
@@ -190,7 +194,7 @@
 >type</SPAN
 > <A HREF="#t%3APhase"
 >Phase</A
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 ></TD
 ></TR
@@ -204,7 +208,7 @@
 >type</SPAN
 > <A HREF="#t%3APort"
 >Port</A
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 ></TD
 ></TR
@@ -336,7 +340,7 @@
 >Drop</A
 > :: <A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> a =&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> a =&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
@@ -360,11 +364,13 @@
 >type</SPAN
 > <A HREF="#t%3AStreams"
 >Streams</A
-> = Writer (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
+> = <A HREF="/Library/Frameworks/HaskellPlatform.framework/share/doc/mtl-1.1.0.2/html/Control-Monad-Writer-Lazy.html#t%3AWriter"
+>Writer</A
+> (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
 > <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
->) <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+>) <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -448,7 +454,7 @@
 ><TD CLASS="decl"
 ><SPAN CLASS="keyword"
 >class</SPAN
-> (Expr a, Assign a, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+> (Expr a, Assign a, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
 > a) =&gt; <A HREF="#t%3AStreamable"
 >Streamable</A
@@ -465,7 +471,7 @@
 >getSubMap</A
 > ::  <A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
-> b -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> b -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
@@ -475,11 +481,11 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AupdateSubMap"
 >updateSubMap</A
-> ::  (<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> ::  (<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (b a) -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> (b a) -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
@@ -515,7 +521,7 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AtypeId"
 >typeId</A
-> :: a -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: a -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -523,7 +529,7 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AtypeIdPrec"
 >typeIdPrec</A
-> :: a -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: a -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -537,7 +543,7 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AshowAsC"
 >showAsC</A
-> :: a -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: a -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -545,11 +551,11 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AmakeTrigger"
 >makeTrigger</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > [(<A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >)] -&gt; <A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
@@ -565,9 +571,9 @@
 >Var</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> a -&gt; Atom <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> a -&gt; Atom <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
-> -&gt; Atom <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> -&gt; Atom <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -599,7 +605,7 @@
 >send</A
 > :: E a -&gt; <A HREF="Language-Copilot-Core.html#t%3APort"
 >Port</A
-> -&gt; Atom <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> -&gt; Atom <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -623,11 +629,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3AbMap"
 >bMap</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> (a <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 >)</TD
 ></TR
@@ -635,11 +641,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Ai8Map"
 >i8Map</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt8"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt8"
 >Int8</A
 >)</TD
 ></TR
@@ -647,11 +653,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Ai16Map"
 >i16Map</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt16"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt16"
 >Int16</A
 >)</TD
 ></TR
@@ -659,11 +665,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Ai32Map"
 >i32Map</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt32"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt32"
 >Int32</A
 >)</TD
 ></TR
@@ -671,11 +677,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Ai64Map"
 >i64Map</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt64"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt64"
 >Int64</A
 >)</TD
 ></TR
@@ -683,11 +689,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Aw8Map"
 >w8Map</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord8"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord8"
 >Word8</A
 >)</TD
 ></TR
@@ -695,11 +701,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Aw16Map"
 >w16Map</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord16"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord16"
 >Word16</A
 >)</TD
 ></TR
@@ -707,11 +713,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Aw32Map"
 >w32Map</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord32"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord32"
 >Word32</A
 >)</TD
 ></TR
@@ -719,11 +725,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Aw64Map"
 >w64Map</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord64"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord64"
 >Word64</A
 >)</TD
 ></TR
@@ -731,11 +737,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3AfMap"
 >fMap</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AFloat"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Prelude.html#t%3AFloat"
 >Float</A
 >)</TD
 ></TR
@@ -743,11 +749,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3AdMap"
 >dMap</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3ADouble"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Prelude.html#t%3ADouble"
 >Double</A
 >)</TD
 ></TR
@@ -776,7 +782,7 @@
 >isEmptySM</A
 > ::  <A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
-> a -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> a -&gt; <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -794,7 +800,7 @@
 >Var</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
-> b -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> b -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > (b a)</TD
 ></TR
@@ -902,7 +908,7 @@
 >mapStreamableMapsM</A
 > :: <SPAN CLASS="keyword"
 >forall</SPAN
-> s s' m. <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Control-Monad.html#t%3AMonad"
+> s s' m. <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Control-Monad.html#t%3AMonad"
 >Monad</A
 > m =&gt; (<SPAN CLASS="keyword"
 >forall</SPAN
@@ -934,7 +940,7 @@
 >Phase</A
 >)] -&gt; (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
-> c, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> c, <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 >)</TD
 ></TR
@@ -1018,7 +1024,7 @@
 >BoundedArray</A
 > a = <A HREF="#v%3AB"
 >B</A
-> ArrIndex (<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> ArrIndex (<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > (A a))</TD
 ></TR
@@ -1094,7 +1100,7 @@
 >type</SPAN
 > <A HREF="#t%3AIndexes"
 >Indexes</A
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
@@ -1134,7 +1140,7 @@
 ></A
 ><B
 >Var</B
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -1157,7 +1163,7 @@
 ></A
 ><B
 >Name</B
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -1180,7 +1186,7 @@
 ></A
 ><B
 >Period</B
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 ></TD
 ></TR
@@ -1203,7 +1209,7 @@
 ></A
 ><B
 >Phase</B
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 ></TD
 ></TR
@@ -1226,7 +1232,7 @@
 ></A
 ><B
 >Port</B
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 ></TD
 ></TR
@@ -1429,7 +1435,7 @@
 >Drop</B
 > :: <A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> a =&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> a =&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
@@ -1453,9 +1459,9 @@
 ><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
 ><TR
 ><TD CLASS="decl"
-><A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Eq.html#t%3AEq"
+><A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Eq.html#t%3AEq"
 >Eq</A
-> a =&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Eq.html#t%3AEq"
+> a =&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Eq.html#t%3AEq"
 >Eq</A
 > (<A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
@@ -1465,9 +1471,9 @@
 ><TD CLASS="decl"
 >(<A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> a, NumE a, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Prelude.html#t%3AFractional"
+> a, NumE a, <A HREF="Language-Copilot-Language.html#t%3AFractional"
 >Fractional</A
-> a) =&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Prelude.html#t%3AFractional"
+> a) =&gt; <A HREF="Language-Copilot-Language.html#t%3AFractional"
 >Fractional</A
 > (<A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
@@ -1477,7 +1483,7 @@
 ><TD CLASS="decl"
 >(<A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> a, NumE a) =&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Prelude.html#t%3ANum"
+> a, NumE a) =&gt; <A HREF="Language-Copilot-Language.html#t%3ANum"
 >Num</A
 > (<A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
@@ -1485,13 +1491,23 @@
 ></TR
 ><TR
 ><TD CLASS="decl"
-><A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+><A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> a =&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+> a =&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
 > (<A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
 > a)</TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Monoid.html#t%3AMonoid"
+>Monoid</A
+> (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
+>StreamableMaps</A
+> <A HREF="Language-Copilot-Core.html#t%3ASpec"
+>Spec</A
+>)</TD
 ></TR
 ></TABLE
 ></DIV
@@ -1514,11 +1530,13 @@
 ></A
 ><B
 >Streams</B
-> = Writer (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
+> = <A HREF="/Library/Frameworks/HaskellPlatform.framework/share/doc/mtl-1.1.0.2/html/Control-Monad-Writer-Lazy.html#t%3AWriter"
+>Writer</A
+> (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
 > <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
->) <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+>) <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -1692,7 +1710,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><SPAN CLASS="keyword"
 >class</SPAN
-> (Expr a, Assign a, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+> (Expr a, Assign a, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
 > a) =&gt; <A NAME="t:Streamable"
 ><A NAME="t%3AStreamable"
@@ -1764,7 +1782,7 @@ type Streams = StreamableMaps Spec
 >getSubMap</B
 > ::  <A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
-> b -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> b -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
@@ -1788,11 +1806,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >updateSubMap</B
-> ::  (<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> ::  (<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (b a) -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> (b a) -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
@@ -1887,7 +1905,7 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >typeId</B
-> :: a -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: a -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -1916,7 +1934,7 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >typeIdPrec</B
-> :: a -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: a -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -1959,7 +1977,7 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >showAsC</B
-> :: a -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: a -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -1982,11 +2000,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >makeTrigger</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > [(<A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >)] -&gt; <A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
@@ -2002,9 +2020,9 @@ type Streams = StreamableMaps Spec
 >Var</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3ASpec"
 >Spec</A
-> a -&gt; Atom <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> a -&gt; Atom <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
-> -&gt; Atom <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> -&gt; Atom <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -2033,7 +2051,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -2041,7 +2059,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3ADouble"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Prelude.html#t%3ADouble"
 >Double</A
 ></TD
 ></TR
@@ -2049,7 +2067,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AFloat"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Prelude.html#t%3AFloat"
 >Float</A
 ></TD
 ></TR
@@ -2057,7 +2075,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt8"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt8"
 >Int8</A
 ></TD
 ></TR
@@ -2065,7 +2083,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt16"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt16"
 >Int16</A
 ></TD
 ></TR
@@ -2073,7 +2091,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt32"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt32"
 >Int32</A
 ></TD
 ></TR
@@ -2081,7 +2099,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt64"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt64"
 >Int64</A
 ></TD
 ></TR
@@ -2089,7 +2107,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord8"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord8"
 >Word8</A
 ></TD
 ></TR
@@ -2097,7 +2115,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord16"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord16"
 >Word16</A
 ></TD
 ></TR
@@ -2105,7 +2123,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord32"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord32"
 >Word32</A
 ></TD
 ></TR
@@ -2113,7 +2131,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3AStreamable"
 >Streamable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord64"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord64"
 >Word64</A
 ></TD
 ></TR
@@ -2168,7 +2186,7 @@ type Streams = StreamableMaps Spec
 >send</B
 > :: E a -&gt; <A HREF="Language-Copilot-Core.html#t%3APort"
 >Port</A
-> -&gt; Atom <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> -&gt; Atom <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -2192,7 +2210,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="decl"
 ><A HREF="Language-Copilot-Core.html#t%3ASendable"
 >Sendable</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord8"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord8"
 >Word8</A
 ></TD
 ></TR
@@ -2282,11 +2300,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >bMap</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> (a <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2300,11 +2318,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >i8Map</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt8"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt8"
 >Int8</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2318,11 +2336,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >i16Map</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt16"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt16"
 >Int16</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2336,11 +2354,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >i32Map</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt32"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt32"
 >Int32</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2354,11 +2372,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >i64Map</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt64"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt64"
 >Int64</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2372,11 +2390,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >w8Map</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord8"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord8"
 >Word8</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2390,11 +2408,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >w16Map</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord16"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord16"
 >Word16</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2408,11 +2426,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >w32Map</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord32"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord32"
 >Word32</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2426,11 +2444,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >w64Map</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord64"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord64"
 >Word64</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2444,11 +2462,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >fMap</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AFloat"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Prelude.html#t%3AFloat"
 >Float</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2462,11 +2480,11 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >dMap</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3ADouble"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Prelude.html#t%3ADouble"
 >Double</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -2489,51 +2507,51 @@ type Streams = StreamableMaps Spec
 ><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
 ><TR
 ><TD CLASS="decl"
->(<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>(<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> (a <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt8"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt8"
 >Int8</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt16"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt16"
 >Int16</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt32"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt32"
 >Int32</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Int.html#t%3AInt64"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt64"
 >Int64</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord8"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord8"
 >Word8</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord16"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord16"
 >Word16</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord32"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord32"
 >Word32</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Word.html#t%3AWord64"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Word.html#t%3AWord64"
 >Word64</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AFloat"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Prelude.html#t%3AFloat"
 >Float</A
->), <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>), <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
-> (a <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3ADouble"
+> (a <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Prelude.html#t%3ADouble"
 >Double</A
->)) =&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Text-Show.html#t%3AShow"
+>)) =&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Text-Show.html#t%3AShow"
 >Show</A
 > (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
@@ -2541,7 +2559,7 @@ type Streams = StreamableMaps Spec
 ></TR
 ><TR
 ><TD CLASS="decl"
-><A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Monoid.html#t%3AMonoid"
+><A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Monoid.html#t%3AMonoid"
 >Monoid</A
 > (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
@@ -2591,7 +2609,7 @@ type Streams = StreamableMaps Spec
 >isEmptySM</B
 > ::  <A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
-> a -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> a -&gt; <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 ></TD
 ></TR
@@ -2618,7 +2636,7 @@ type Streams = StreamableMaps Spec
 >Var</A
 > -&gt; <A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
-> b -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> b -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > (b a)</TD
 ></TR
@@ -2805,7 +2823,7 @@ type Streams = StreamableMaps Spec
 >mapStreamableMapsM</B
 > :: <SPAN CLASS="keyword"
 >forall</SPAN
-> s s' m. <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Control-Monad.html#t%3AMonad"
+> s s' m. <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Control-Monad.html#t%3AMonad"
 >Monad</A
 > m =&gt; (<SPAN CLASS="keyword"
 >forall</SPAN
@@ -2841,7 +2859,7 @@ type Streams = StreamableMaps Spec
 >Phase</A
 >)] -&gt; (<A HREF="Language-Copilot-Core.html#t%3AStreamableMaps"
 >StreamableMaps</A
-> c, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Bool.html#t%3ABool"
+> c, <A HREF="Language-Copilot-Language.html#t%3ABool"
 >Bool</A
 >)</TD
 ></TR
@@ -2999,7 +3017,7 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >B</B
-> ArrIndex (<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> ArrIndex (<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > (A a))</TD
 ><TD CLASS="rdoc"
@@ -3129,7 +3147,7 @@ type Streams = StreamableMaps Spec
 ></A
 ><B
 >Indexes</B
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/containers/Data-Map.html#t%3AMap"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/containers-0.3.0.0/Data-Map.html#t%3AMap"
 >Map</A
 > <A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
@@ -3143,7 +3161,7 @@ type Streams = StreamableMaps Spec
 ><TD CLASS="botbar"
 >Produced by <A HREF="http://www.haskell.org/haddock/"
 >Haddock</A
-> version 2.4.2</TD
+> version 2.6.1</TD
 ></TR
 ></TABLE
 ></BODY

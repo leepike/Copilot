@@ -21,7 +21,11 @@
 ><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
 ></TD
 ><TD CLASS="title"
->copilot-0.21: A lazy-list language for generating constant-time and constant-space C programs.  Uses Atom as a backend.</TD
+>copilot-0.22: A stream DSL for writing embedded C.</TD
+><TD CLASS="topbut"
+><A HREF="http://github.com/leepike/Copilot/Language.Copilot.Interface.html"
+>Source code</A
+></TD
 ><TD CLASS="topbut"
 ><A HREF="index.html"
 >Contents</A
@@ -102,13 +106,13 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3Atest"
 >test</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -122,13 +126,13 @@
 >interpret</A
 > :: <A HREF="Language-Copilot-Core.html#t%3AStreams"
 >Streams</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -146,9 +150,9 @@
 >Name</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -160,11 +164,11 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3Averify"
 >verify</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AFilePath"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AFilePath"
 >FilePath</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -178,9 +182,9 @@
 >interface</A
 > :: <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -192,9 +196,9 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3Ahelp"
 >help</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -238,7 +242,7 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AsetC"
 >setC</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -300,9 +304,9 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AsetPP"
 >setPP</A
-> :: (<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: (<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >) -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -318,7 +322,7 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AsetN"
 >setN</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -350,7 +354,7 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AsetR"
 >setR</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -366,7 +370,7 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AsetDir"
 >setDir</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -382,7 +386,7 @@
 ><TD CLASS="decl"
 ><A HREF="#v%3AsetGCC"
 >setGCC</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -400,7 +404,7 @@
 >setTriggers</A
 > :: [(<A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >)] -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -473,13 +477,13 @@
 ></A
 ><B
 >test</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -497,13 +501,13 @@
 >interpret</B
 > :: <A HREF="Language-Copilot-Core.html#t%3AStreams"
 >Streams</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -525,9 +529,9 @@
 >Name</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -543,11 +547,11 @@
 ></A
 ><B
 >verify</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AFilePath"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AFilePath"
 >FilePath</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -565,9 +569,9 @@
 >interface</B
 > :: <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -590,9 +594,9 @@
 ></A
 ><B
 >help</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -662,7 +666,7 @@
 ></A
 ><B
 >setC</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -765,9 +769,9 @@
 ></A
 ><B
 >setPP</B
-> :: (<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: (<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >) -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -793,7 +797,7 @@
 ></A
 ><B
 >setN</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -851,7 +855,7 @@
 ></A
 ><B
 >setR</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -871,7 +875,7 @@
 ></A
 ><B
 >setDir</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -897,7 +901,7 @@
 ></A
 ><B
 >setGCC</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 > -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -925,7 +929,7 @@
 >setTriggers</B
 > :: [(<A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >)] -&gt; <A HREF="Language-Copilot-Interface.html#t%3AOptions"
 >Options</A
@@ -957,7 +961,7 @@
 ><TD CLASS="botbar"
 >Produced by <A HREF="http://www.haskell.org/haddock/"
 >Haddock</A
-> version 2.4.2</TD
+> version 2.6.1</TD
 ></TR
 ></TABLE
 ></BODY

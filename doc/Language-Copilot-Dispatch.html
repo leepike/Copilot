@@ -21,7 +21,11 @@
 ><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
 ></TD
 ><TD CLASS="title"
->copilot-0.21: A lazy-list language for generating constant-time and constant-space C programs.  Uses Atom as a backend.</TD
+>copilot-0.22: A stream DSL for writing embedded C.</TD
+><TD CLASS="topbut"
+><A HREF="http://github.com/leepike/Copilot/Language.Copilot.Dispatch.html"
+>Source code</A
+></TD
 ><TD CLASS="topbut"
 ><A HREF="index.html"
 >Contents</A
@@ -102,9 +106,9 @@
 >Iterations</A
 > -&gt; <A HREF="Language-Copilot-Dispatch.html#t%3AVerbose"
 >Verbose</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -171,7 +175,7 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3AgccOpts"
 >gccOpts</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -179,7 +183,7 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3AgetPeriod"
 >getPeriod</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > <A HREF="Language-Copilot-Core.html#t%3APeriod"
 >Period</A
@@ -197,7 +201,7 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3AoutputDir"
 >outputDir</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -205,7 +209,7 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Acompiler"
 >compiler</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ></TR
@@ -213,11 +217,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3AprePostCode"
 >prePostCode</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
-> (<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> (<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >)</TD
 ></TR
@@ -225,11 +229,11 @@
 ><TD CLASS="recfield"
 ><A HREF="#v%3Atriggers"
 >triggers</A
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > [(<A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >)]</TD
 ></TR
@@ -282,7 +286,7 @@
 >type</SPAN
 > <A HREF="#t%3AIterations"
 >Iterations</A
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 ></TD
 ></TR
@@ -365,9 +369,9 @@
 >Iterations</A
 > -&gt; <A HREF="Language-Copilot-Dispatch.html#t%3AVerbose"
 >Verbose</A
-> -&gt; <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/System-IO.html#t%3AIO"
+> -&gt; <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/System-IO.html#t%3AIO"
 >IO</A
-> <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Unit.html#t%3A%28%29"
+> <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/ghc-prim-0.2.0.0/GHC-Unit.html#t%3A%28%29"
 >()</A
 ></TD
 ></TR
@@ -529,7 +533,7 @@
 ></A
 ><B
 >gccOpts</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ><TD CLASS="rdoc"
@@ -544,7 +548,7 @@
 ></A
 ><B
 >getPeriod</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > <A HREF="Language-Copilot-Core.html#t%3APeriod"
 >Period</A
@@ -576,7 +580,7 @@
 ></A
 ><B
 >outputDir</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ><TD CLASS="rdoc"
@@ -591,7 +595,7 @@
 ></A
 ><B
 >compiler</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 ></TD
 ><TD CLASS="rdoc"
@@ -606,11 +610,11 @@
 ></A
 ><B
 >prePostCode</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
-> (<A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+> (<A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >)</TD
 ><TD CLASS="rdoc"
@@ -625,11 +629,11 @@
 ></A
 ><B
 >triggers</B
-> :: <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Maybe.html#t%3AMaybe"
+> :: <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Maybe.html#t%3AMaybe"
 >Maybe</A
 > [(<A HREF="Language-Copilot-Core.html#t%3AVar"
 >Var</A
->, <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Char.html#t%3AString"
+>, <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Char.html#t%3AString"
 >String</A
 >)]</TD
 ><TD CLASS="rdoc"
@@ -723,7 +727,7 @@
 ></A
 ><B
 >Iterations</B
-> = <A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/ghc-prim/GHC-Types.html#t%3AInt"
+> = <A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Int.html#t%3AInt"
 >Int</A
 ></TD
 ></TR
@@ -803,7 +807,7 @@
 ><TABLE CLASS="vanilla" CELLSPACING="1" CELLPADDING="0"
 ><TR
 ><TD CLASS="decl"
-><A HREF="/opt/local/share/ghc-6.10.4/doc/ghc/libraries/base/Data-Eq.html#t%3AEq"
+><A HREF="/Library/Frameworks/GHC.framework/Versions/612/usr/share/doc/ghc/html/libraries/base-4.2.0.2/Data-Eq.html#t%3AEq"
 >Eq</A
 > <A HREF="Language-Copilot-Dispatch.html#t%3AVerbose"
 >Verbose</A
@@ -824,7 +828,7 @@
 ><TD CLASS="botbar"
 >Produced by <A HREF="http://www.haskell.org/haddock/"
 >Haddock</A
-> version 2.4.2</TD
+> version 2.6.1</TD
 ></TR
 ></TABLE
 ></BODY
