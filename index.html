@@ -54,10 +54,12 @@ pre { background: #000; color: #fff; padding: 15px;}
 <pre><code>
 fib :: Streams
 fib = do
-  "fib" .= [0,1] ++ var "fib" + (drop 1 $ varW64 "fib")
-  "t" .= even (var "fib")
+  let fib = varW64 "fib"
+  let t   = varB "t"
+  fib .= [0,1] ++ fib + (drop 1 fib)
+  t   .= even fib
     where even :: Spec Word64 -> Spec Bool
-          even w = w `mod` 2 == 0
+          even w' = w' `mod` 2 == 0
 </code> </pre>
 </p>
 
