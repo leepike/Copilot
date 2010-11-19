@@ -55,7 +55,7 @@ pre { background: #000; color: #fff; padding: 15px;}
 fib :: Streams
 fib = do
   let f = varW64 "f"
-  let t   = varB "t"
+  let t = varB "t"
   f .= [0,1] ++ f + (drop 1 f)
   t .= even f
     where even :: Spec Word64 -> Spec Bool
