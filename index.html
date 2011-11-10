@@ -52,63 +52,22 @@ pre { background: #000; color: #fff; padding: 15px;}
 <br><br><br>
 <hr width="100%" size="3" noshade />
 
-    <p><h1>STOP!</h1>We have completely reimplemented Copilot and have moved
-    it's repositories.  This version of Copilot is deprecated.  For the new language
-    and interpreter,
-    go <a href="https://github.com/niswegmann/copilot-language">here</a>.  For
-    the new real-time C99 backend, go <a href="https://github.com/niswegmann/copilot-c99">here</a>.  Soon,
-    the new Copilot packages will be on Hackage.  Email me (user: leepike,
-    domain: gmail.com) with any questions.</p>
-
 <hr width="100%" size="3" noshade />
 <br><br><br>
 
      <p>Can you write a list in Haskell? Then you can write embedded C code
-    using Copilot. Here's a Copilot program that computes the Fibonacci
-    sequence (over Word 64s) and tests for even numbers:</p>
-<pre><code>
-fib :: Streams
-fib = do
-  let f = varW64 "f"
-  let t = varB "t"
-  f .= [0,1] ++ f + (drop 1 f)
-  t .= even f
-    where even :: Spec Word64 -> Spec Bool
-          even w' = w' `mod` 2 == 0
-</code> </pre>
-</p>
+    using Copilot.  Copilot is a stream language that mimics Haskell's lazy
+    lists and generates real-time C code.</p>
 
-<p>Copilot contains an interpreter, a compiler, and uses a model-checker to check
-    the correctness of your program. The compiler generates constant time and
+<p>Copilot contains an interpreter, two compiler back-ends, a QuickCheck engine,
+    and uses a model-checker to check
+    the correctness of your programs. The compiler generates constant time and
     constant space C code via <a href="http://github.com/tomahawkins/atom" >Tom
-    Hawkin's Atom Language</a> (thanks Tom!). Copilot is specifically developed to write
-    embedded software monitors for more complex embedded systems, but it can be used to
-    develop a variety of functional-style embedded code.
+    Hawkin's Atom Language</a> (thanks Tom!) as well as Levent Erk&ouml;k's <a href="http://hackage.haskell.org/package/sbv">SBV
+    language</a>. 
 </p>
-
-
-<p>
-Executing
-<pre>
-> compile fib "fib" baseOpts
-</pre>
-generates <a href="code/fib.c" >fib.c</a> and <a href="code/fib.h" >fib.h</a> (with a <tt>main()</tt> for simulation---other options
-    change that). We can then run
-<pre>
-> interpret fib 100 baseOpts
-</pre>
-to check that the Copilot program does what we expect. Finally, if we have <a href="http://www.cprover.org/cbmc/" >CBMC</a>
-    installed, we can run
-
-<pre>
-> verify "fib.c"
-</pre>
-    to prove a bunch of memory safety properties of the generated program.</p>
-
-    
 
 <h2>Diving In</h2>
-    <p>
 <ul>
   <li><strong>Installing</strong>: Copilot is a language embedded in Haskell. So you'll need <a
     href="http://hackage.haskell.org/platform/" >Haskell</a> to use it. Copilot
@@ -120,54 +79,33 @@ to check that the Copilot program does what we expect. Finally, if we have <a hr
 > cabal install copilot
 </pre></li>
 
-<li><strong>Writing Copilot Programs</strong>: the Copilot language is
-    documented <a href="doc/Language-Copilot-Language.html" >here</a>.  As well,
-    there are a bunch of example Copilot programs <a
-    href="http://github.com/leepike/Copilot/tree/master/Language/Copilot/Examples/">here</a>.
-    Also read <a href="http://www.cs.indiana.edu/~lepike/pub_pages/rv2010.html"
-    >this paper</a> (PDF) that provides details about the language design.
-   </li>
+<li><strong>Tutorial</strong>: <a href="https://github.com/niswegmann/copilot-discussion/blob/master/tutorial/copilot_tutorial.pdf">Copilot tutorial</a>.
 
-<li>
-       <div class="download">
-      <a href="http://github.com/leepike/Copilot/zipball/master">
-        <img border="0" width="60" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/leepike/Copilot/tarball/master">
-        <img border="0" width="60" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+<li><strong>Examples</strong>: A lot of examples can be found in
+  the <a href="https://github.com/leepike/Copilot/tree/master/Examples">Examples
+    directory</a>, included when you install Copilot.</li>
    
-<strong>Source code and documentation</strong>: <em><font size="+2">get the source code on GitHub</font></em>: <a
-    href="http://github.com/leepike/Copilot">leepike/Copilot</a>.
-Source code documentation (built using Haddock) is available <a
-    href="doc/index.html">here</a>.
-
-    You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>> git clone git://github.com/leepike/Copilot</pre>
-         Alternatively, you can download this project in either
-      <a href="http://github.com/leepike/Copilot/zipball/master">zip</a> or
-      <a href="http://github.com/leepike/Copilot/tarball/master">tar</a>
-      formats.
+<li><strong>Source code</strong>: 
+  <ul>
+     <li><a href="https://github.com/leepike/Copilot">Main Copilot repo</a></li>
+     <li><a href="https://github.com/niswegmann/copilot-language">Copilot language</a></li>
+     <li><a href="https://github.com/seni/copilot-libraries">Copilot libraries</a></li>
+     <li><a href="https://github.com/niswegmann/copilot-core">Core language</a></li>
+     <li><a href="https://github.com/niswegmann/copilot-c99">Atom back-end</a></li>
+     <li><a href="https://github.com/leepike/copilot-sbv">SBV back-end</a></li>
+     <li><a href="https://github.com/niswegmann/copilot-cbmc">CBMC interface</a></li>
+     <li><a href="https://github.com/niswegmann/copilot-discussion">Discussion and todos</a></li>
+  </ul>
+<li>The "old" Copilot: for posterity, the previous version of Copilot is
+  available <a href="">here</a>.
 </li>
-
-
-<li><strong>Help/API documentation</strong>: to get help with the interface (e.g., <tt>compile</tt>,
- <tt>interpret</tt>, etc.), in a context in which <a
- href="http://github.com/leepike/Copilot/blob/master/Language/Copilot/Interface.hs"
- >Language/Copilot/Interface.hs</a> is visible, evaluate
-<pre>> help</pre>
-    to get the contents of <a
- href="http://github.com/leepike/Copilot/blob/master/Language/Copilot/Help.hs"
- >Language/Copilot/Help.hs</a>. That'll give you the basic API of the library.</li>
 
 </ul>
   </p>
-    
 
       <h2>Other Resources</h2>
      <p>
       <ul>
-        <li><strong>Paper</strong> about Copilot: <a href="http://www.cs.indiana.edu/~lepike/pub_pages/rv2010.html" >http://www.cs.indiana.edu/~lepike/pub_pages/rv2010.html</a></li>
         <li><strong>Pics/videos</strong> from Copilot's maiden voyage monitoring a fault-tolerant
     pitot tube sensor (partly written in <a href="http://github.com/tomahawkins/atom" >Atom</a>): <a href="http://picasaweb.google.com/105722675808588603973" >http://picasaweb.google.com/105722675808588603973</a></li>
         <li>Copilot on Hackage: <a
@@ -189,10 +127,11 @@ BSD3</p>
 <h2>The Copilot Team</h2>
 <p>
 <ul>
-  <li><strong>Maintainer</strong>: Lee Pike (leepike@galois.com), Galois, Inc. Email with any questions, bugs, or cool uses!</li>
+  <li><strong>Maintainer</strong>: Lee Pike (leepike@gmail.com), Galois, Inc. Email with any questions, bugs, or cool uses!</li>
     <li>Alwyn Goodloe, National Institute of Aerospace</li>
 <li>Robin Morisset, &Eacute;cole Normale Sup&eacute;rieure </li>
 <li>Sebastian Niller, Technische Universit&auml;t Ilmenau </li>
+<li>Nis Wegmann, University of Cophenhagen</li>
 </ul>
  </p>
 
