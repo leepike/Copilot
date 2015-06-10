@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/leepike/Copilot.svg?branch=master)](https://travis-ci.org/leepike/Copilot)
 
+# STOP! The official Copilot repos are now at [https://github.com/Copilot-Language/](https://github.com/Copilot-Language).
+
 Copilot: a stream DSL
 ====================================
 Copilot is a stream (i.e., infinite lists) domain-specific language (DSL) in
